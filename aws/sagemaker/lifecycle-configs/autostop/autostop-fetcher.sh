@@ -7,7 +7,7 @@
 #
 # USAGE:
 #   SCRIPT:
-#     autostop-fetcher -p SCRIPT_PATH -n SCRIPT_NAME
+#     autostop-fetcher -p $SCRIPT_PATH -n $SCRIPT_NAME
 #     SCRIPT_PATH: url to github directory containing raw SCRIPT_NAME e.g. https://raw.githubusercontent.com/aws-samples/....
 #     SCRIPT_NAME: filename of script e.g. on-start.sh
 #   CLOUDFORMATION:
@@ -17,7 +17,7 @@
 #           OnStart:
 #             - Content:
 #                 Fn::Base64:
-#                   !Sub "cd /home/ec2-user && wget ${FuelUtilsUrl}/autostop-fetcher.sh && ./autostop-fetcher -p ${AwsScriptRepoUrl} -n ${ScriptName}"
+#                   !Sub "cd /home/ec2-user && wget ${FuelUtilsUrl}/autostop-fetcher.sh && ./autostop-fetcher.sh -p ${AwsScriptRepoUrl} -n ${ScriptName}"
 #
 while getopts p:n: flag
 do
