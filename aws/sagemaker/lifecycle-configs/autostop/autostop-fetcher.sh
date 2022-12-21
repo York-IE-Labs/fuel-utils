@@ -27,5 +27,8 @@ do
   esac
 done
 
+start_dir=$(realpath $(pwd))
+
 mkdir -p scripts/autostop && cd $_
 wget "$script_path/$script_name" && chmod +x "$script_name" && ./"$script_name"
+cd "$start_dir"
