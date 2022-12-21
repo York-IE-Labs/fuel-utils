@@ -17,7 +17,7 @@
 #           OnStart:
 #             - Content:
 #                 Fn::Base64:
-#                   !Sub "cd /home/ec2-user && wget ${FUEL_UTILS_URL}/autostop-fetcher.sh && ./autostop-fetcher -p ${AwsScriptRepoUrl} -n ${ScriptName}"
+#                   !Sub "cd /home/ec2-user && wget ${FuelUtilsUrl}/autostop-fetcher.sh && ./autostop-fetcher -p ${AwsScriptRepoUrl} -n ${ScriptName}"
 #
 while getopts p:n: flag
 do
