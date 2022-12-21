@@ -43,6 +43,7 @@ echo "$repository_subdirectory" >> .git/info/sparse-checkout
 git pull origin master
 
 cp -r neptune-python-utils/neptune_python_utils "$local_directory"
+
 source activate "$notebook_environment"
 pip3 install gremlinpython
 source deactivate
