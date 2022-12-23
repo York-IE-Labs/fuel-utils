@@ -36,7 +36,7 @@ done
 
 start_dir=$(realpath $(pwd))
 
-mkdir -p $"local_directory"
+mkdir -p "$local_directory"
 mkdir -p python/amazon-neptune-tools && cd $_
 git remote add -f origin "$github_repo_url" && git config core.sparseCheckout true
 echo "$repository_subdirectory" >> .git/info/sparse-checkout
@@ -46,6 +46,5 @@ cp -r neptune-python-utils/neptune_python_utils "$local_directory"
 
 source activate "$notebook_environment"
 pip3 install gremlinpython
-source deactivate
 
 cd "$start_dir"
