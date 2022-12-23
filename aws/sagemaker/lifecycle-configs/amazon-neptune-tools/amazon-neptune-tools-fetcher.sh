@@ -38,6 +38,7 @@ start_dir=$(realpath $(pwd))
 
 mkdir -p "$local_directory"
 mkdir -p python/amazon-neptune-tools && cd $_
+git init
 git remote add -f origin "$github_repo_url" && git config core.sparseCheckout true
 echo "$repository_subdirectory" >> .git/info/sparse-checkout
 git pull origin master
