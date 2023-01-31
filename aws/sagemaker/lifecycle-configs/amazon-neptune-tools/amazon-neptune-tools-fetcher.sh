@@ -46,6 +46,6 @@ git pull origin master
 cp -r neptune-python-utils/neptune_python_utils "$local_directory"
 
 source activate "$notebook_environment"
-pip3 install gremlinpython
+pip3 install gremlinpython==3.6.1
 
 cd "$start_dir"
